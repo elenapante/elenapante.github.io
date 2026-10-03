@@ -226,9 +226,15 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 80px;
+      grid-template-columns: 0.8fr 1.2fr 1fr;
+      gap: 40px;
       align-items: start;
+    }
+
+    .about-portrait {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
     }
 
     .about-text {
@@ -531,6 +537,16 @@
         </h2>
 
         <div class="about-grid">
+
+          <img
+            src="/assets/elena-pante-portrait.jpg"
+            alt="Elena Panté holding a microphone at an event"
+            class="about-portrait"
+            width="1024"
+            height="1536"
+            loading="lazy"
+            decoding="async"
+          >
 
           <div class="about-text">
             <p>
