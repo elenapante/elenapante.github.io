@@ -13,9 +13,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Gloock&display=swap"
     rel="stylesheet"
   >
 
@@ -83,10 +82,12 @@
     }
 
     .logo {
-      font-family: "Newsreader", serif;
+      font-family: "Gloock", serif;
       font-size: 1.45rem;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: 0.01em;
+      white-space: nowrap;
+      text-transform: none;
     }
 
     .nav-links {
@@ -141,12 +142,14 @@
     }
 
     h1 {
-      font-family: "Newsreader", serif;
+      font-family: "Gloock", serif;
       font-weight: 400;
-      font-size: clamp(3.8rem, 9vw, 7.7rem);
-      line-height: 0.93;
+      font-size: clamp(2rem, 9vw, 7.7rem);
+      line-height: 1.05;
       letter-spacing: -0.035em;
       margin-bottom: 38px;
+      white-space: nowrap;
+      text-transform: none;
     }
 
     .hero-description {
@@ -206,7 +209,7 @@
     }
 
     h2 {
-      font-family: "Newsreader", serif;
+      font-family: "Gloock", serif;
       font-weight: 400;
       font-size: clamp(2.4rem, 5vw, 4.3rem);
       line-height: 1.05;
@@ -267,14 +270,14 @@
     }
 
     .pub-number {
-      font-family: "Newsreader", serif;
+      font-family: "Gloock", serif;
       font-size: 1.2rem;
       color: var(--accent);
       margin-bottom: 70px;
     }
 
     .publication-card h3 {
-      font-family: "Newsreader", serif;
+      font-family: "Gloock", serif;
       font-weight: 400;
       font-size: 2rem;
       line-height: 1.12;
@@ -326,7 +329,7 @@
     }
 
     .experience-item h3 {
-      font-family: "Newsreader", serif;
+      font-family: "Gloock", serif;
       font-size: 1.9rem;
       font-weight: 400;
       line-height: 1.15;
@@ -388,7 +391,6 @@
     /* MOBILE */
 
     @media (max-width: 820px) {
-
       nav {
         min-height: 65px;
       }
@@ -406,7 +408,7 @@
       }
 
       h1 {
-        font-size: clamp(3.2rem, 16vw, 5.6rem);
+        font-size: clamp(1.8rem, 10.5vw, 5.6rem);
       }
 
       section {
@@ -439,10 +441,8 @@
         flex-direction: column;
       }
     }
-
   </style>
 </head>
-
 
 <body>
 
@@ -464,10 +464,9 @@
     </div>
   </header>
 
-
-  <!-- HERO -->
-
   <main>
+
+    <!-- HERO -->
 
     <section class="hero" id="home">
       <div class="container">
@@ -477,10 +476,7 @@
             International Security · Nuclear Policy · Strategic Studies
           </div>
 
-          <h1>
-            Elena<br>
-            Panté
-          </h1>
+          <h1>Elena Panté</h1>
 
           <p class="hero-description">
             Early-career researcher working on nuclear strategy,
@@ -506,7 +502,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- ABOUT -->
 
@@ -544,21 +539,19 @@
             </p>
           </div>
 
-
           <div id="research">
-
             <div class="research-list">
 
               <div class="research-item">
-                Nuclear Strategy & Deterrence
+                Nuclear Strategy &amp; Deterrence
               </div>
 
               <div class="research-item">
-                Arms Control & Non-Proliferation
+                Arms Control &amp; Non-Proliferation
               </div>
 
               <div class="research-item">
-                WMD & CBRN Security
+                WMD &amp; CBRN Security
               </div>
 
               <div class="research-item">
@@ -566,25 +559,23 @@
               </div>
 
               <div class="research-item">
-                North Korea & East Asian Security
+                North Korea &amp; East Asian Security
               </div>
 
               <div class="research-item">
-                Space & Dual-Use Technologies
+                Space &amp; Dual-Use Technologies
               </div>
 
               <div class="research-item">
-                Hybrid Threats & Digital Securitisation
+                Hybrid Threats &amp; Digital Securitisation
               </div>
 
             </div>
-
           </div>
 
         </div>
       </div>
     </section>
-
 
     <!-- PUBLICATIONS -->
 
@@ -596,11 +587,9 @@
 
         <div class="publications-grid">
 
-
           <!-- PAPER 1 -->
 
           <article class="publication-card">
-
             <div>
               <div class="pub-number">01</div>
 
@@ -608,18 +597,14 @@
                 North Korea · Space Security · Deterrence
               </div>
 
-              <h3>
-                Opaque Deterrence in Orbit
-              </h3>
+              <h3>Opaque Deterrence in Orbit</h3>
 
               <p class="pub-outlet">
                 IE International Policy Review × The Sundial Press,
                 Sciences Po · 2026
               </p>
 
-              <p class="award">
-                Best Writer Award
-              </p>
+              <p class="award">Best Writer Award</p>
             </div>
 
             <a
@@ -630,14 +615,11 @@
             >
               Read publication →
             </a>
-
           </article>
-
 
           <!-- PAPER 2 -->
 
           <article class="publication-card">
-
             <div>
               <div class="pub-number">02</div>
 
@@ -645,9 +627,7 @@
                 Ukraine · Information Warfare · Securitisation
               </div>
 
-              <h3>
-                Securing the Narrative
-              </h3>
+              <h3>Securing the Narrative</h3>
 
               <p class="pub-outlet">
                 IE International Policy Review × The Politic,
@@ -663,14 +643,11 @@
             >
               Read publication →
             </a>
-
           </article>
-
 
           <!-- PAPER 3 -->
 
           <article class="publication-card">
-
             <div>
               <div class="pub-number">03</div>
 
@@ -686,9 +663,7 @@
                 IE International Policy Review · 2025
               </p>
 
-              <p class="award">
-                Honourable Mention
-              </p>
+              <p class="award">Honourable Mention</p>
             </div>
 
             <a
@@ -699,13 +674,11 @@
             >
               Read publication →
             </a>
-
           </article>
 
         </div>
       </div>
     </section>
-
 
     <!-- EXPERIENCE -->
 
@@ -715,19 +688,15 @@
         <div class="section-label">03 — Experience</div>
 
         <h2>
-          Research, editorial work & policy engagement
+          Research, editorial work &amp; policy engagement
         </h2>
 
-
         <div class="experience-item">
-
-          <div class="experience-date">
-            2025 — 2026
-          </div>
+          <div class="experience-date">2025 — 2026</div>
 
           <div>
             <h3>
-              Writer & International Relations Chapter Officer
+              Writer &amp; International Relations Chapter Officer
             </h3>
 
             <div class="experience-org">
@@ -741,23 +710,16 @@
               communication across the International Relations chapter.
             </p>
           </div>
-
         </div>
 
-
         <div class="experience-item">
-
-          <div class="experience-date">
-            2025 — Present
-          </div>
+          <div class="experience-date">2025 — Present</div>
 
           <div>
-            <h3>
-              Workshop Team Member
-            </h3>
+            <h3>Workshop Team Member</h3>
 
             <div class="experience-org">
-              Hikma Association · Bologna & Forlì
+              Hikma Association · Bologna &amp; Forlì
             </div>
 
             <p class="experience-description">
@@ -767,20 +729,13 @@
               background research.
             </p>
           </div>
-
         </div>
 
-
         <div class="experience-item">
-
-          <div class="experience-date">
-            Education
-          </div>
+          <div class="experience-date">Education</div>
 
           <div>
-            <h3>
-              Global Security Policy
-            </h3>
+            <h3>Global Security Policy</h3>
 
             <div class="experience-org">
               Roma Tre University · Master's Degree
@@ -792,20 +747,13 @@
               International System and conflict studies.
             </p>
           </div>
-
         </div>
 
-
         <div class="experience-item">
-
-          <div class="experience-date">
-            2022 — 2025
-          </div>
+          <div class="experience-date">2022 — 2025</div>
 
           <div>
-            <h3>
-              International Relations and Diplomatic Affairs
-            </h3>
+            <h3>International Relations and Diplomatic Affairs</h3>
 
             <div class="experience-org">
               University of Bologna · Forlì Campus
@@ -816,12 +764,10 @@
               Diplomatic Affairs.
             </p>
           </div>
-
         </div>
 
       </div>
     </section>
-
 
     <!-- CONTACT -->
 
@@ -842,7 +788,6 @@
         </p>
 
         <div class="contact-links">
-
           <a
             href="mailto:elenapante04@gmail.com"
             class="button button-accent"
@@ -858,7 +803,6 @@
           >
             LinkedIn
           </a>
-
         </div>
 
       </div>
@@ -866,20 +810,15 @@
 
   </main>
 
-
   <!-- FOOTER -->
 
   <footer>
     <div class="container footer-inner">
-
-      <div>
-        © 2026 Elena Panté
-      </div>
+      <div>© 2026 Elena Panté</div>
 
       <div>
         International Security · Strategic Studies · Nuclear Policy
       </div>
-
     </div>
   </footer>
 
