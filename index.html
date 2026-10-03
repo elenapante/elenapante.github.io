@@ -240,6 +240,7 @@
     }
 
     .publication-card {
+      position: relative;
       background: var(--surface);
       padding: 0;
       min-height: 0;
@@ -306,6 +307,17 @@
       color: var(--accent);
       font-size: 0.9rem;
       font-weight: 600;
+    }
+
+    .read-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    .publication-card:focus-within {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
     }
 
     .read-link {
@@ -430,6 +442,7 @@
       }
 
       .publication-card {
+      position: relative;
         min-height: 390px;
       }
 
@@ -590,12 +603,10 @@
             </div>
 
             <a
-              href="https://www.sundialpress.co/2026/04/18/opaque-deterrence-in-orbit-how-north-korea-uses-space-to-project-power-and-challenge-arms-control/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="research/opaque-deterrence-in-orbit/"
               class="read-link"
             >
-              Read publication →
+              Abstract &amp; full text →
             </a>
           
             </div>
@@ -630,12 +641,10 @@
             </div>
 
             <a
-              href="https://issuu.com/theyalepolitic/docs/the_politic_2025_2026_special_edition_ie_universi/29"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="research/securing-the-narrative/"
               class="read-link"
             >
-              Read publication →
+              Abstract &amp; full text →
             </a>
           
             </div>
@@ -673,12 +682,10 @@
             </div>
 
             <a
-              href="https://ipr.blogs.ie.edu/2025/06/29/illiberal-democracy-and-contestation-of-the-liberal-order-the-case-of-trumps-america"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="research/illiberal-democracy/"
               class="read-link"
             >
-              Read publication →
+              Abstract &amp; full text →
             </a>
           
             </div>
@@ -833,4 +840,5 @@
 </body>
 </html>
 ```
+
 
