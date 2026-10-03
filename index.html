@@ -120,64 +120,31 @@
 
     /* HERO */
 
-    .hero {
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid var(--line);
+#home {--ep-dark:#171a1a;--ep-ivory:#f4f1ea;--ep-wine:#6f1d2b;--ep-fade:42%;padding:0;container-type:inline-size;background:var(--ep-dark);color:var(--ep-ivory);min-height:640px;position:relative;isolation:isolate;display:flex;align-items:center;overflow:hidden}
+#home .ed-photo{position:absolute;right:-2%;top:0;width:62%;height:100%;z-index:0;mask-image:linear-gradient(90deg,transparent 0%,#000 32%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 32%)}
+#home .ed-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 24%}
+#home .ed-wash{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--ep-dark) 17%,color-mix(in srgb,var(--ep-dark) 97%,transparent) 35%,color-mix(in srgb,var(--ep-dark) 75%,transparent) var(--ep-fade),transparent 72%),linear-gradient(0deg,var(--ep-dark) 0%,transparent 28%),linear-gradient(180deg,color-mix(in srgb,var(--ep-dark) 25%,transparent),transparent 20%);pointer-events:none}
+#home .ed-copy{position:relative;z-index:2;width:65%;padding:92px 5% 96px}
+#home .ed-eyebrow{color:#d8d1c6;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:500;line-height:1.9;margin:0 0 28px;max-width:460px}
+#home h1{font:400 clamp(48px,7.9cqw,88px)/1.08 'Gloock',Georgia,serif;letter-spacing:-.035em;color:var(--ep-ivory);margin:0 0 32px;white-space:nowrap}
+#home .ed-description{font-size:19px;line-height:1.7;font-weight:300;color:#ded8ce;max-width:490px;margin:0 0 38px}
+#home .ed-actions{display:flex;gap:14px;flex-wrap:wrap}
+#home .ed-button{display:inline-flex;align-items:center;justify-content:center;padding:14px 18px;border:1px solid #b9b2a7;background:transparent;color:var(--ep-ivory);font-size:11px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;min-height:45px}
+#home .ed-button:hover{background:var(--ep-ivory);color:var(--ep-dark)}
+#home .ed-button.primary{background:var(--ep-wine);border-color:var(--ep-wine);color:var(--ep-ivory)}
+#home .ed-button.primary:hover{background:#842739;border-color:#842739}
+    @media (max-width: 820px) {
+      #home {display:flex;flex-direction:column;align-items:stretch;min-height:0;}
+      #home .ed-copy {width:100%;padding:60px 7% 24px;}
+      #home h1 {font-size:clamp(40px,10.5vw,67px);}
+      #home .ed-description {font-size:18px;max-width:100%;}
+      #home .ed-photo {position:relative;order:2;width:100%;right:auto;top:auto;height:430px;mask-image:linear-gradient(0deg,transparent 0%,#000 28%,#000 78%,transparent 100%);-webkit-mask-image:linear-gradient(0deg,transparent 0%,#000 28%,#000 78%,transparent 100%);}
+      #home .ed-photo img {object-position:50% 23%;}
+      #home .ed-wash {display:none;}
+      #home .ed-actions {gap:10px;}
+      #home .ed-button {font-size:11px;padding:13px 14px;}
     }
 
-    .hero-inner {
-      padding: 110px 0 90px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 280px;
-      align-items: center;
-      gap: 56px;
-    }
-
-    .hero-copy {
-      min-width: 0;
-    }
-
-    .hero-portrait {
-      width: 100%;
-      max-width: 280px;
-      height: auto;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 0.78rem;
-      font-weight: 600;
-      margin-bottom: 28px;
-    }
-
-    h1 {
-      font-family: "Gloock", serif;
-      font-weight: 400;
-      font-size: clamp(2rem, 7.6vw, 6.5rem);
-      line-height: 1.05;
-      letter-spacing: -0.035em;
-      margin-bottom: 38px;
-      white-space: nowrap;
-      text-transform: none;
-    }
-
-    .hero-description {
-      max-width: 760px;
-      font-size: clamp(1.1rem, 2vw, 1.45rem);
-      font-weight: 300;
-      color: #33312e;
-      margin-bottom: 44px;
-    }
-
-    .hero-links {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
 
     .button {
       display: inline-block;
@@ -204,6 +171,7 @@
       background: #531520;
       border-color: #531520;
     }
+
 
     /* GENERAL SECTIONS */
 
@@ -239,15 +207,9 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr 1fr;
-      gap: 40px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 80px;
       align-items: start;
-    }
-
-    .about-portrait {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
     }
 
     .about-text {
@@ -427,12 +389,6 @@
         min-height: auto;
       }
 
-      .hero-inner {
-        padding: 100px 0 80px;
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
       h1 {
         font-size: clamp(1.8rem, 10.5vw, 5.6rem);
       }
@@ -495,62 +451,11 @@
 
     <!-- HERO -->
 
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-inner">
-          <div class="hero-copy">
+    <section class="hero" id="home" aria-label="Introduction">
+<div class="ed-photo"><img src="/assets/elena-pante-portrait.jpg" alt="Elena Panté holding a microphone at an event" fetchpriority="high" decoding="async" width="1024" height="1536"></div><div class="ed-wash"></div>
+<div class="ed-copy"><p class="ed-eyebrow">International Security · Nuclear Policy · Strategic Studies</p><h1>Elena Panté</h1><p class="ed-description">Early-career researcher working on nuclear strategy, arms control and non-proliferation, authoritarian strategic behaviour, WMD security and dual-use technologies.</p><div class="ed-actions"><a class="ed-button primary" href="#publications">Selected Research</a><a class="ed-button" href="https://www.linkedin.com/in/elena-pant%C3%A8" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="ed-button" href="/Elena_Pante_CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a></div></div>
+</section>
 
-            <div class="eyebrow">
-              International Security · Nuclear Policy · Strategic Studies
-            </div>
-
-            <h1>Elena Panté</h1>
-
-            <p class="hero-description">
-              Early-career researcher working on nuclear strategy,
-              arms control and non-proliferation, authoritarian strategic
-              behaviour, WMD security and dual-use technologies.
-            </p>
-
-            <div class="hero-links">
-              <a href="#publications" class="button button-accent">
-                Selected Research
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/elena-pant%C3%A8"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button"
-              >
-                LinkedIn
-              </a>
-
-              <a
-                href="/Elena_Pante_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button"
-              >
-                View CV
-              </a>
-            </div>
-
-          </div>
-
-          <img
-            src="/assets/elena-pante-portrait.jpg"
-            alt="Elena Panté holding a microphone at an event"
-            class="hero-portrait"
-            width="1024"
-            height="1536"
-            fetchpriority="high"
-            decoding="async"
-          >
-
-        </div>
-      </div>
-    </section>
 
     <!-- ABOUT -->
 
@@ -565,16 +470,6 @@
         </h2>
 
         <div class="about-grid">
-
-          <img
-            src="/assets/elena-pante-portrait.jpg"
-            alt="Elena Panté holding a microphone at an event"
-            class="about-portrait"
-            width="1024"
-            height="1536"
-            loading="lazy"
-            decoding="async"
-          >
 
           <div class="about-text">
             <p>
@@ -884,3 +779,4 @@
 </body>
 </html>
 ```
+
