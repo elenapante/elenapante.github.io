@@ -129,7 +129,20 @@
 
     .hero-inner {
       padding: 110px 0 90px;
-      max-width: 1000px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      align-items: center;
+      gap: 56px;
+    }
+
+    .hero-copy {
+      min-width: 0;
+    }
+
+    .hero-portrait {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
     }
 
     .eyebrow {
@@ -416,6 +429,8 @@
 
       .hero-inner {
         padding: 100px 0 80px;
+        grid-template-columns: 1fr;
+        gap: 40px;
       }
 
       h1 {
@@ -483,42 +498,55 @@
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-inner">
+          <div class="hero-copy">
 
-          <div class="eyebrow">
-            International Security · Nuclear Policy · Strategic Studies
+            <div class="eyebrow">
+              International Security · Nuclear Policy · Strategic Studies
+            </div>
+
+            <h1>Elena Panté</h1>
+
+            <p class="hero-description">
+              Early-career researcher working on nuclear strategy,
+              arms control and non-proliferation, authoritarian strategic
+              behaviour, WMD security and dual-use technologies.
+            </p>
+
+            <div class="hero-links">
+              <a href="#publications" class="button button-accent">
+                Selected Research
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/elena-pant%C3%A8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+              >
+                LinkedIn
+              </a>
+
+              <a
+                href="/Elena_Pante_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+              >
+                View CV
+              </a>
+            </div>
+
           </div>
 
-          <h1>Elena Panté</h1>
-
-          <p class="hero-description">
-            Early-career researcher working on nuclear strategy,
-            arms control and non-proliferation, authoritarian strategic
-            behaviour, WMD security and dual-use technologies.
-          </p>
-
-          <div class="hero-links">
-            <a href="#publications" class="button button-accent">
-              Selected Research
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/elena-pant%C3%A8"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button"
-            >
-              LinkedIn
-            </a>
-
-            <a
-              href="/Elena_Pante_CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button"
-            >
-              View CV
-            </a>
-          </div>
+          <img
+            src="/assets/elena-pante-portrait.jpg"
+            alt="Elena Panté holding a microphone at an event"
+            class="hero-portrait"
+            width="1024"
+            height="1536"
+            fetchpriority="high"
+            decoding="async"
+          >
 
         </div>
       </div>
