@@ -241,13 +241,29 @@
 
     .publication-card {
       background: var(--surface);
-      padding: 34px;
-      min-height: 440px;
+      padding: 0;
+      min-height: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       border: 1px solid transparent;
       transition: all 0.28s ease;
+    }
+
+    .publication-cover {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .publication-body {
+      padding: 24px 23px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
     }
 
     .publication-card:hover {
@@ -259,7 +275,7 @@
       font-family: "Gloock", serif;
       font-size: 1.2rem;
       color: var(--accent);
-      margin-bottom: 70px;
+      margin-bottom: 23px;
     }
 
     .publication-card h3 {
@@ -544,6 +560,16 @@
           <!-- PAPER 1 -->
 
           <article class="publication-card">
+            <img
+              src="/assets/opaque-deterrence-cover.jpg"
+              alt="Conceptual illustration of the North Korean flag above Earth with an orbital arc"
+              class="publication-cover"
+              width="900"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="publication-body">
             <div>
               <div class="pub-number">01</div>
 
@@ -569,11 +595,23 @@
             >
               Read publication →
             </a>
+          
+            </div>
           </article>
 
           <!-- PAPER 2 -->
 
           <article class="publication-card">
+            <img
+              src="/assets/securing-narrative-cover.jpg"
+              alt="Conceptual illustration of digital codes and Ukraine with burgundy overlays"
+              class="publication-cover"
+              width="900"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="publication-body">
             <div>
               <div class="pub-number">02</div>
 
@@ -597,11 +635,23 @@
             >
               Read publication →
             </a>
+          
+            </div>
           </article>
 
           <!-- PAPER 3 -->
 
           <article class="publication-card">
+            <img
+              src="/assets/illiberal-democracy-cover.jpg"
+              alt="Donald Trump on a balcony with his shadow on the wall"
+              class="publication-cover"
+              width="900"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="publication-body">
             <div>
               <div class="pub-number">03</div>
 
@@ -628,6 +678,8 @@
             >
               Read publication →
             </a>
+          
+            </div>
           </article>
 
         </div>
