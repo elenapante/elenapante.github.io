@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Elena Panté | International Security Researcher</title>
+
+  <meta
+    name="description"
+    content="Elena Panté — Early-career researcher in international security, nuclear strategy, arms control, non-proliferation and authoritarian politics."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Libre+Caslon+Display&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --background: #f4f1ea;
+      --surface: #ebe7de;
+      --text: #171717;
+      --muted: #68655f;
+      --accent: #6f1d2b;
+      --line: #cfc9bd;
+      --white: #ffffff;
+      --max-width: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(90%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(244, 241, 234, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-links a {
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      padding: 110px 0 90px;
+      max-width: 1000px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-family: "Libre Caslon Display", serif;
+      font-weight: 400;
+      font-size: clamp(3.8rem, 9vw, 7.7rem);
+      line-height: 0.93;
+      letter-spacing: -0.035em;
+      margin-bottom: 38px;
+    }
+
+    .hero-description {
+      max-width: 760px;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      font-weight: 300;
+      color: #33312e;
+      margin-bottom: 44px;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 21px;
+      border: 1px solid var(--text);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: 0.25s ease;
+    }
+
+    .button:hover {
+      background: var(--text);
+      color: var(--background);
+    }
+
+    .button-accent {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .button-accent:hover {
+      background: #531520;
+      border-color: #531520;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 110px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.76rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-family: "Libre Caslon Display", serif;
+      font-weight: 400;
+      font-size: clamp(2.4rem, 5vw, 4.3rem);
+      line-height: 1.05;
+      margin-bottom: 45px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 1.15rem;
+      color: #302f2c;
+    }
+
+    .about-text p + p {
+      margin-top: 22px;
+    }
+
+    .research-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .research-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+
+    /* PUBLICATIONS */
+
+    .publications-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .publication-card {
+      background: var(--surface);
+      padding: 34px;
+      min-height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid transparent;
+      transition: all 0.28s ease;
+    }
+
+    .publication-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    .pub-number {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 70px;
+    }
+
+    .publication-card h3 {
+      font-family: "Libre Caslon Display", serif;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+
+    .pub-tags {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+
+    .pub-outlet {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .award {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .read-link {
+      margin-top: 28px;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-bottom: 1px solid var(--text);
+      width: fit-content;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 0.35fr 1fr;
+      gap: 60px;
+      padding: 38px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-date {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .experience-item h3 {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .experience-org {
+      color: var(--accent);
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+    }
+
+    .experience-description {
+      color: #44413d;
+      max-width: 750px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact h2 {
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 36px 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 820px) {
+
+      nav {
+        min-height: 65px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        padding: 100px 0 80px;
+      }
+
+      h1 {
+        font-size: clamp(3.2rem, 16vw, 5.6rem);
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .about-grid,
+      .publications-grid,
+      .experience-item {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        gap: 50px;
+      }
+
+      .publications-grid {
+        gap: 18px;
+      }
+
+      .publication-card {
+        min-height: 390px;
+      }
+
+      .experience-item {
+        gap: 14px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo">Elena Panté</a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="eyebrow">
+            International Security · Nuclear Policy · Strategic Studies
+          </div>
+
+          <h1>
+            Elena<br>
+            Panté
+          </h1>
+
+          <p class="hero-description">
+            Early-career researcher working on nuclear strategy,
+            arms control and non-proliferation, authoritarian strategic
+            behaviour, WMD security and dual-use technologies.
+          </p>
+
+          <div class="hero-links">
+            <a href="#publications" class="button button-accent">
+              Selected Research
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/elena-pant%C3%A8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button"
+            >
+              LinkedIn
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+      <div class="container">
+
+        <div class="section-label">01 — Profile</div>
+        <h2>Researching security at the intersection of strategy, technology and proliferation.</h2>
+
+        <div class="about-grid">
+
+          <div class="about-text">
+            <p>
+              I am an early-career researcher and Master's candidate
+              specialising in international security and strategic studies,
+              with a particular interest in nuclear strategy, arms control
+              and non-proliferation.
+            </p>
+
+            <p>
+              My research also examines authoritarian strategic behaviour,
+              illicit WMD and CBRN trafficking, dual-use technologies,
+              space security and the political dimensions of contemporary
+              security threats.
+            </p>
+
+            <p>
+              My work has been published through international editorial
+              collaborations involving The Sundial Press at Sciences Po
+              and The Politic at Yale University.
+            </p>
+          </div>
+
+
+          <div id="research">
+
+            <div class="research-list">
+
+              <div class="research-item">
+                Nuclear Strategy & Deterrence
+              </div>
+
+              <div class="research-item">
+                Arms Control & Non-Proliferation
+              </div>
+
+              <div class="research-item">
+                WMD & CBRN Security
+              </div>
+
+              <div class="research-item">
+                Authoritarian Strategic Behaviour
+              </div>
+
+              <div class="research-item">
+                North Korea & East Asian Security
+              </div>
+
+              <div class="research-item">
+                Space & Dual-Use Technologies
+              </div>
+
+              <div class="research-item">
+                Hybrid Threats & Digital Securitisation
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PUBLICATIONS -->
+
+    <section id="publications">
+      <div class="container">
+
+        <div class="section-label">02 — Selected Research</div>
+        <h2>Publications</h2>
+
+        <div class="publications-grid">
+
+
+          <!-- PAPER 1 -->
+
+          <article class="publication-card">
+
+            <div>
+              <div class="pub-number">01</div>
+
+              <div class="pub-tags">
+                North Korea · Space Security · Deterrence
+              </div>
+
+              <h3>
+                Opaque Deterrence in Orbit
+              </h3>
+
+              <p class="pub-outlet">
+                IE International Policy Review × The Sundial Press,
+                Sciences Po · 2026
+              </p>
+
+              <p class="award">
+                Best Writer Award
+              </p>
+            </div>
+
+            <a
+              href="https://www.sundialpress.co/2026/04/18/opaque-deterrence-in-orbit-how-north-korea-uses-space-to-project-power-and-challenge-arms-control/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="read-link"
+            >
+              Read publication →
+            </a>
+
+          </article>
+
+
+          <!-- PAPER 2 -->
+
+          <article class="publication-card">
+
+            <div>
+              <div class="pub-number">02</div>
+
+              <div class="pub-tags">
+                Ukraine · Information Warfare · Securitisation
+              </div>
+
+              <h3>
+                Securing the Narrative
+              </h3>
+
+              <p class="pub-outlet">
+                IE International Policy Review × The Politic,
+                Yale University · 2026
+              </p>
+            </div>
+
+            <a
+              href="https://issuu.com/theyalepolitic/docs/the_politic_2025_2026_special_edition_ie_universi/29"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="read-link"
+            >
+              Read publication →
+            </a>
+
+          </article>
+
+
+          <!-- PAPER 3 -->
+
+          <article class="publication-card">
+
+            <div>
+              <div class="pub-number">03</div>
+
+              <div class="pub-tags">
+                Democratic Backsliding · Liberal Order · United States
+              </div>
+
+              <h3>
+                Illiberal Democracy and Contestation of the Liberal Order
+              </h3>
+
+              <p class="pub-outlet">
+                IE International Policy Review · 2025
+              </p>
+
+              <p class="award">
+                Honourable Mention
+              </p>
+            </div>
+
+            <a
+              href="https://ipr.blogs.ie.edu/2025/06/29/illiberal-democracy-and-contestation-of-the-liberal-order-the-case-of-trumps-america"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="read-link"
+            >
+              Read publication →
+            </a>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+      <div class="container">
+
+        <div class="section-label">03 — Experience</div>
+        <h2>Research, editorial work & policy engagement</h2>
+
+
+        <div class="experience-item">
+
+          <div class="experience-date">
+            2025 — 2026
+          </div>
+
+          <div>
+            <h3>
+              Writer & International Relations Chapter Officer
+            </h3>
+
+            <div class="experience-org">
+              IE International Policy Review · IE University
+            </div>
+
+            <p class="experience-description">
+              Conducted policy-oriented research and contributed to
+              international editorial projects while coordinating
+              manuscript review, publication workflows and contributor
+              communication across the International Relations chapter.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div class="experience-date">
+            2025 — Present
+          </div>
+
+          <div>
+            <h3>
+              Workshop Team Member
+            </h3>
+
+            <div class="experience-org">
+              Hikma Association · Bologna & Forlì
+            </div>
+
+            <p class="experience-description">
+              Contribute to the research, design and delivery of
+              policy-oriented workshops and international simulations,
+              preparing analytical materials, country profiles and
+              background research.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div class="experience-date">
+            Education
+          </div>
+
+          <div>
+            <h3>
+              Global Security Policy
+            </h3>
+
+            <div class="experience-org">
+              Roma Tre University · Master's Degree
+            </div>
+
+            <p class="experience-description">
+              Graduate studies in international security with coursework
+              including Strategic Studies, Nuclear Power in the
+              International System and conflict studies.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="experience-item">
+
+          <div class="experience-date">
+            2022 — 2025
+          </div>
+
+          <div>
+            <h3>
+              International Relations and Diplomatic Affairs
+            </h3>
+
+            <div class="experience-org">
+              University of Bologna · Forlì Campus
+            </div>
+
+            <p class="experience-description">
+              Bachelor's degree in International Relations and
+              Diplomatic Affairs.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-label">04 — Contact</div>
+
+        <h2>
+          Interested in research, security policy or collaboration?
+        </h2>
+
+        <p>
+          I am interested in research opportunities and collaborations
+          in international security, nuclear policy, non-proliferation
+          and strategic studies.
+        </p>
+
+        <div class="contact-links">
+
+          <a
+            href="mailto:elenapante04@gmail.com"
+            class="button button-accent"
+          >
+            Email me
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/elena-pant%C3%A8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
+            LinkedIn
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container footer-inner">
+
+      <div>
+        © 2026 Elena Panté
+      </div>
+
+      <div>
+        International Security · Strategic Studies · Nuclear Policy
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
