@@ -368,6 +368,16 @@
     }
 
     /* EXPERIENCE */
+    .experience-group + .experience-group { margin-top: 42px; }
+    .experience-subheading {
+      color: var(--accent);
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0 0 20px;
+    }
 
     .experience-item {
       display: grid;
@@ -382,7 +392,7 @@
       font-size: 0.9rem;
     }
 
-    .experience-item h3 {
+    .experience-item h4 {
       font-family: "Gloock", serif;
       font-size: 1.9rem;
       font-weight: 400;
@@ -779,32 +789,13 @@
           Research, editorial work &amp; policy engagement
         </h2>
 
-        <div class="experience-item">
-          <div class="experience-date">2025 — 2026</div>
-
-          <div>
-            <h3>
-              Writer &amp; International Relations Chapter Officer
-            </h3>
-
-            <div class="experience-org">
-              IE International Policy Review · IE University
-            </div>
-
-            <p class="experience-description">
-              Conducted policy-oriented research and contributed to
-              international editorial projects while coordinating
-              manuscript review, publication workflows and contributor
-              communication across the International Relations chapter.
-            </p>
-          </div>
-        </div>
-
-        <div class="experience-item">
+        <div class="experience-group" role="group" aria-labelledby="professional-experience">
+          <h3 class="experience-subheading" id="professional-experience">Professional Experience</h3>
+<div class="experience-item">
           <div class="experience-date">2025 — Present</div>
 
           <div>
-            <h3>Workshop Team Member</h3>
+            <h4>Workshop Team Member</h4>
 
             <div class="experience-org">
               Hikma Association · Bologna &amp; Forlì
@@ -819,11 +810,34 @@
           </div>
         </div>
 
-        <div class="experience-item">
-          <div class="experience-date">Education</div>
+<div class="experience-item">
+          <div class="experience-date">2025 — 2026</div>
 
           <div>
-            <h3>Global Security Policy</h3>
+            <h4>
+              Writer &amp; International Relations Chapter Officer
+            </h4>
+
+            <div class="experience-org">
+              IE International Policy Review · IE University
+            </div>
+
+            <p class="experience-description">
+              Conducted policy-oriented research and contributed to
+              international editorial projects while coordinating
+              manuscript review, publication workflows and contributor
+              communication across the International Relations chapter.
+            </p>
+          </div>
+        </div>
+        </div>
+        <div class="experience-group" role="group" aria-labelledby="education">
+          <h3 class="experience-subheading" id="education">Education</h3>
+<div class="experience-item">
+          <div class="experience-date">2025 — Present</div>
+
+          <div>
+            <h4>Global Security Policy</h4>
 
             <div class="experience-org">
               Roma Tre University · Master's Degree
@@ -837,11 +851,11 @@
           </div>
         </div>
 
-        <div class="experience-item">
+<div class="experience-item">
           <div class="experience-date">2022 — 2025</div>
 
           <div>
-            <h3>International Relations and Diplomatic Affairs</h3>
+            <h4>International Relations and Diplomatic Affairs</h4>
 
             <div class="experience-org">
               University of Bologna · Forlì Campus
@@ -853,7 +867,7 @@
             </p>
           </div>
         </div>
-
+        </div>
       </div>
     </section>
 
